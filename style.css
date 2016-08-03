@@ -1,0 +1,145 @@
+html, body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h3, h5, p {
+  margin: 0.7em 0;
+}
+
+p {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.fa {
+  margin-right: 1em;
+  font-size: 1.1em;
+  color: #80BD01;
+  width: 1em;
+}
+
+.primary {
+  color: #80BD01;
+  font-weight: bold;
+}
+
+.footer {
+  width: 100%;
+  text-align: right;
+  font-size: 0.7em;
+  padding: 1em;
+  background-color: #80BD01;
+}
+
+.contacts h5 {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.section {
+  border-bottom: 2px dashed #eee;
+}
+
+.section:last-child {
+  border: none;
+}
+
+.profile-picture {
+  width: 125px;
+  border-radius: 100%;
+}
+
+.content {
+  max-width: 816px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em 0;
+  padding-top: 1em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0.5em 4em;
+  flex-grow: 1;
+}
+
+.column:first-child {
+  width: 40%;
+  border-right: 2px dashed #eee;
+  flex-grow: 0;
+}
+
+.row {
+  width: 100%;
+}
+
+.slider {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  display: flex;
+  margin: 0.3em 0;
+}
+
+.slider .skill-name {
+  background-color: #80BD01;
+  color: #fff;
+  margin-right: 0.5em;
+  padding: 0 0.5em;
+  white-space: nowrap;
+  width: 9em;
+}
+
+.slider .skill-level {
+  width: 100%;
+  position: relative;
+  background: #eee;
+}
+.slider .skill-level._100:after,
+.slider .skill-level._25:after,
+.slider .skill-level._75:after {
+  content: '';
+  background-color: #80BD01;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slider .skill-level._100:after {
+  width: 100%;
+}
+
+.slider .skill-level._75:after {
+  width: 75%;
+}
+
+.slider .skill-level._25:after {
+  width: 25%;
+}
+
+
+@media only screen and (max-width: 815px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .column, .column:first-child {
+    flex-grow: 1;
+    width: auto;
+  }
+}
